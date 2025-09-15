@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1757975365 source:c:\users\mgsga\desktop\facultad\prograb\tp_4\ej3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"agenda.h"
+
+1757970556 c:\users\mgsga\desktop\facultad\prograb\tp_4\ej3\agenda.h
+
+1757975732 source:c:\users\mgsga\desktop\facultad\prograb\tp_4\ej3\agenda.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"agenda.h"
+
