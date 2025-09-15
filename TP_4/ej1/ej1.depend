@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1757896342 source:c:\users\mgsga\desktop\facultad\prograb\tp_4\ej1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fracciones.h"
+
+1757895836 c:\users\mgsga\desktop\facultad\prograb\tp_4\ej1\fracciones.h
+
+1757895821 source:c:\users\mgsga\desktop\facultad\prograb\tp_4\ej1\fracciones.c
+	<stdio.h>
+	<stdlib.h>
+	"fracciones.h"
+
