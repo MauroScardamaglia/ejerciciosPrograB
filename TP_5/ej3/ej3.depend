@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1758294776 source:c:\users\mgsga\desktop\facultad\prograb\tp_5\ej3\piladinam.c
+	<stdio.h>
+	<stdlib.h>
+	"pilaDinam.h"
+
+1758294792 c:\users\mgsga\desktop\facultad\prograb\tp_5\ej3\piladinam.h
+
+1758296320 source:c:\users\mgsga\desktop\facultad\prograb\tp_5\ej3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pilaDinam.h"
+
