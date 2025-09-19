@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1758241423 source:c:\users\mgsga\desktop\facultad\prograb\tp_5\ej1_c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"colaEst.h"
+
+1758231265 c:\users\mgsga\desktop\facultad\prograb\tp_5\ej1_c\colaest.h
+
+1758241800 source:c:\users\mgsga\desktop\facultad\prograb\tp_5\ej1_c\colaest.c
+	<stdio.h>
+	<stdlib.h>
+	"colaEst.h"
+
