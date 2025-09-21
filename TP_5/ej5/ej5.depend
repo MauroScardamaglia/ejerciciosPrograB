@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1758377723 source:c:\users\mgsga\desktop\facultad\prograb\tp_5\ej5\coladinam.c
+	<stdio.h>
+	<stdlib.h>
+	"colaDinam.h"
+
+1758377701 c:\users\mgsga\desktop\facultad\prograb\tp_5\ej5\coladinam.h
+
+1758378415 source:c:\users\mgsga\desktop\facultad\prograb\tp_5\ej5\main.c
+	<stdio.h>
+	"tdacola.h"
+	<stdio.h>
+	"colaDinam.h"
+
