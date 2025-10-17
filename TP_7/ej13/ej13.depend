@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1760645374 source:c:\users\mgsga\desktop\facultad\prograb\tp_7\ej13\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
