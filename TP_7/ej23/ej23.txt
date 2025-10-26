@@ -1,0 +1,146 @@
+23. Dado un árbol N-ario de enteros, desarrollar funciones utilizando TDA N.ARIO para:
+
+a) retornar la cantidad de nodos que posee.
+
+int cantNodos(arbol a, pos p) {
+  int aux = 0;
+  pos c;
+  if (!nulo(p)) {
+    aux++;
+    c = hijoMasIzq(p,a);
+    while (!nulo(c)) {
+      aux += cantNodos(a,c);
+      c = hermanoDer(c,a);
+    }
+  }
+  return aux;
+}
+    
+
+
+
+b) hallar el porcentaje de claves pares
+
+main ... int cant = 0, cantPar = 0;
+	 porcClavePar(a,raiz(a),&cant,&cantPar);
+
+void porcClavePar(arbol a, pos p, int * cant, int * cantPar) {
+  pos c;
+  if (!nulo(c)) {
+    *cant += 1;
+    *cantPar += info(p) % 2 == 0;
+    c = hijoMasIzq(p,a);
+    while (!nulo(c)) {
+      porcClavePar(a,c,cant,clavePar);
+      c = hermanoDer(c,a);
+    }
+  }
+}
+
+
+c) retornar su grado
+
+main .... printf("grado %d \n",gradoArbol(a, raiz(a) ));
+
+int gradoArbol (arbol a, pos p) {
+  int grado = 0, max = 0, aux;
+  pos c;
+  if (!nulo (p) ) {
+    c = hijoMasIzq(p,a);
+    while (!nulo(c)) {
+      grado++;
+      aux = gradoArbol(c,a);
+      if (aux > max)
+        max = aux;
+      c = hermanoDer(c,a);
+    }
+  }
+  return (grado>max) ? grado : max;
+}
+
+d) hallar la cantidad de nodos de grado impar que hay en niveles impares. 
+
+main ... printf("%d \n",cantImpar(a,raiz(a),1));
+
+int cantImpar(arbol a, pos p, int nivel) {
+  pos c;
+  int aux = 0, grado = 0;
+  if (!nulo(p)) {
+    c = hijoMasIzq(p,a);
+    while (!nulo(c)) {
+      grado++;
+      aux += cantImpar(a,c,nivel + 1);
+      c = hermanoDer(c,a);
+    }
+  }
+  return aux + (grado % 2 == 1 && nivel % 2 == 1);
+}
+
+
+e) verificar si cumple que para todas las claves salvo las de las hojas, su valor numérico es igual a la cantidad de hijos. (función int y función void)
+
+void verif(arbol a, pos p, int * aux) {
+  pos c;
+  int hijos = 0;
+  if (!nulo(p)) {
+    c = hijoMasIzq(p,a);
+    while (!nulo(c)){
+      hijos++;
+      verif(a,c,aux);
+      c = hermanoDer(a,c,aux);
+    }
+    if (hijos && info(c) == hijos)
+      *aux = 0;
+  }
+}
+
+int verif(arbol a, pos p) {
+  pos c;
+  int hijos = 0, aux = 1;
+  if (!nulo(p))
+    return 0;
+  else {
+    c = hijoMasizq(p,a);
+    while (!nulo(c) && aux) {
+      hijos++;
+      aux = verif(a,c);
+      c = hermanoDer(c,a);
+    }
+    if (hijos)
+      aux = aux && info(c) == hijos;
+  }
+  return aux;
+}
+
+
+f) obtener el promedio de las claves en el nivel k (dato)
+
+main... int cant = 0, acum = 0, k;
+	scanf("%d",&k);
+	promNivelK(a, raiz(a), &cant, &acum, 1, k);
+	if (cant)
+	  printf("promedio de claves en nivel %d es &6.2f \n", k, 1.0 * 	  acum / cont );
+	else
+	  printf("no hay nodos en el nivel %d \n",k);
+
+void promNivelK(arbol a, pos p, int * cant, int * acum, int nivel, int k) {
+  pos c;
+  if (!nulo(p) {
+    if (nivel == k) {
+      c = p;
+      while (!nulo(c)) {
+        *cant += 1;
+	*acum += info(c);
+	c = hermanoDer(c,a);
+      }
+    }
+  else
+    if (nivel < k) {
+      c = hijoMasIzq(p,a);
+      while (!nulo(c)) {
+        promNivelK(a,c,cant,acum,nivel + 1,k);
+	c = hermanoDer(c,a);
+      }
+    }
+  }
+}
